@@ -86,3 +86,6 @@ fp-info-cache
 
 # debug information files
 *.dwo
+
+#macos
+*.DS_Store
