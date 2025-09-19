@@ -1970,6 +1970,16 @@
 		)
 		(uuid "2d53aa3a-f90d-4e45-8369-57d02329b19a")
 	)
+	(text "maybe use ~26pF capacitors with 18pF,40MHz crystal?"
+		(exclude_from_sim no)
+		(at 68.834 104.14 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "6f28cf08-69ed-4b05-8793-f45b909c342d")
+	)
 	(junction
 		(at 128.27 41.91)
 		(diameter 0)
