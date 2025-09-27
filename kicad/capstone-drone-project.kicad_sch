@@ -2708,9 +2708,9 @@
 		)
 		(uuid "6f28cf08-69ed-4b05-8793-f45b909c342d")
 	)
-	(text "may need to add RC delay circuit here to account for tstbl and trst\ntstbl - at least 50us for power rails to stabilize before CHIP_PU is pulled high\ntrst - at least 50us for CHIP_PU to stay below Vil_nrst to reset chip"
+	(text "-at least 50us for power rails to stabilize before CHIP_PU is pulled high\n-at least 50us for CHIP_PU to stay below Vil_nrst to reset chip"
 		(exclude_from_sim no)
-		(at 230.886 101.6 0)
+		(at 228.346 101.092 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3392,7 +3392,7 @@
 			)
 		)
 	)
-	(global_label "Vcc"
+	(global_label "VDD "
 		(shape input)
 		(at 20.32 21.59 180)
 		(fields_autoplaced yes)
@@ -3404,7 +3404,7 @@
 		)
 		(uuid "b852b69f-4782-4e50-9724-047cc2966471")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 14.069 21.59 0)
+			(at 12.7386 21.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6582,7 +6582,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "1u"
 			(at 171.45 123.1899 0)
 			(effects
 				(font
