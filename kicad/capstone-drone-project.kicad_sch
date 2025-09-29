@@ -2758,6 +2758,16 @@
 		)
 		(uuid "c89a99a6-3932-4c1e-9b4c-b29e9007fe2c")
 	)
+	(text "-UART for serial communication"
+		(exclude_from_sim no)
+		(at 171.704 97.79 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "f6ee8bb8-af14-4ee4-a717-a01021be5f79")
+	)
 	(text "trace antenna here"
 		(exclude_from_sim no)
 		(at 272.034 37.338 0)
@@ -3128,6 +3138,16 @@
 	)
 	(wire
 		(pts
+			(xy 153.67 101.6) (xy 154.94 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "811a0935-043d-4b21-bbaa-e1c188d8f284")
+	)
+	(wire
+		(pts
 			(xy 20.32 17.78) (xy 24.13 17.78)
 		)
 		(stroke
@@ -3225,6 +3245,16 @@
 			(type default)
 		)
 		(uuid "afa1a9dc-74aa-4f78-b17d-f5961e499350")
+	)
+	(wire
+		(pts
+			(xy 153.67 104.14) (xy 162.56 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b749b0de-7d53-4e3b-ab52-6c841fb3731e")
 	)
 	(wire
 		(pts
@@ -3454,6 +3484,28 @@
 			)
 		)
 	)
+	(global_label "TX_S"
+		(shape input)
+		(at 162.56 104.14 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "4376af12-cfa2-44f6-a351-979dba5a4870")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 169.8994 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "EN"
 		(shape input)
 		(at 191.77 120.65 0)
@@ -3599,6 +3651,28 @@
 		(uuid "c38974f6-d091-48b9-b5dc-080c27a605a4")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 35.7028 17.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "RX_S"
+		(shape input)
+		(at 162.56 101.6 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "e0340f7a-453f-43e9-ad32-782ba2d81190")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 170.2018 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4517,6 +4591,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 86.36 99.06 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2b5fb20c-e3cd-4652-b702-d0d8d3c4a262")
+		(property "Reference" "R6"
+			(at 86.36 92.71 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "23"
+			(at 86.36 95.25 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 86.36 100.838 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 86.36 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 86.36 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "49f5a74b-1490-4617-b5b7-37af7532c72f")
+		)
+		(pin "1"
+			(uuid "b1bc76ec-9c76-4aa6-8819-8dcb5731c970")
+		)
+		(instances
+			(project "capstone-drone-project"
+				(path "/99584293-ff2b-4397-8b8b-c39f1581dc82"
+					(reference "R6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 33.02 101.6 0)
 		(unit 1)
@@ -4744,6 +4885,76 @@
 			(project ""
 				(path "/99584293-ff2b-4397-8b8b-c39f1581dc82"
 					(reference "Q3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 67.31 88.9 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "34e9b659-d384-4159-be56-bbef07ffa193")
+		(property "Reference" "C18"
+			(at 71.12 87.6299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C"
+			(at 71.12 90.1699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 68.2752 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 67.31 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 67.31 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "c2c3be0a-1b3c-40bf-addf-b893e2b87100")
+		)
+		(pin "1"
+			(uuid "36d99de6-8070-4bb4-9283-f7b61efbdd97")
+		)
+		(instances
+			(project ""
+				(path "/99584293-ff2b-4397-8b8b-c39f1581dc82"
+					(reference "C18")
 					(unit 1)
 				)
 			)
@@ -5322,6 +5533,76 @@
 			(project "capstone-drone-project"
 				(path "/99584293-ff2b-4397-8b8b-c39f1581dc82"
 					(reference "#PWR024")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 69.85 101.6 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "582dfce0-1140-4790-bab9-e345f8e5a2dc")
+		(property "Reference" "C12"
+			(at 73.66 100.3299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C"
+			(at 73.66 102.8699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 70.8152 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 69.85 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 69.85 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "c3321ad4-fef8-4957-94cd-c6d917eb1048")
+		)
+		(pin "1"
+			(uuid "45b6a985-abaa-43df-b2d7-a73f7bb2fbc0")
+		)
+		(instances
+			(project ""
+				(path "/99584293-ff2b-4397-8b8b-c39f1581dc82"
+					(reference "C12")
 					(unit 1)
 				)
 			)
@@ -6179,6 +6460,74 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 158.75 101.6 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "87f67736-fe7f-4ff5-92d9-8ce1285ca428")
+		(property "Reference" "R4"
+			(at 158.75 95.25 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R"
+			(at 158.75 97.79 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 158.75 103.378 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 158.75 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 158.75 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "6329ce6f-6ae9-4090-badb-a9ff44507978")
+		)
+		(pin "1"
+			(uuid "a76a4983-027d-497c-9d63-c54be5ce65c5")
+		)
+		(instances
+			(project ""
+				(path "/99584293-ff2b-4397-8b8b-c39f1581dc82"
+					(reference "R4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 25.4 82.55 0)
 		(unit 1)
@@ -6847,6 +7196,74 @@
 			(project ""
 				(path "/99584293-ff2b-4397-8b8b-c39f1581dc82"
 					(reference "#PWR022")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 96.52 96.52 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b614b742-4a22-419f-90dc-46f020543e23")
+		(property "Reference" "R5"
+			(at 96.52 90.17 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "23"
+			(at 96.52 92.71 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 96.52 98.298 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 96.52 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 96.52 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "a3fe5492-372a-4446-aaa7-e2be1196e2d4")
+		)
+		(pin "1"
+			(uuid "0702a05f-9ce4-43c3-8a8a-fd6ba521d7c1")
+		)
+		(instances
+			(project ""
+				(path "/99584293-ff2b-4397-8b8b-c39f1581dc82"
+					(reference "R5")
 					(unit 1)
 				)
 			)
