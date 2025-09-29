@@ -2708,9 +2708,9 @@
 		)
 		(uuid "6a541fb9-5d6a-4943-b7aa-1811efea055d")
 	)
-	(text "10pF capacitors w/ 10pF oscillator, assuming 5pF stray capacitance; this is a wip - need to do more research"
+	(text "-assume 5pF Cstray\n-Cl=10pF"
 		(exclude_from_sim no)
-		(at 99.314 146.304 0)
+		(at 100.584 133.604 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2738,9 +2738,19 @@
 		)
 		(uuid "ac99f0d8-21bc-414d-8ad5-0c2cfc67a49d")
 	)
-	(text "may need to add RC delay circuit here to account for tstbl and trst\ntstbl - at least 50us for power rails to stabilize before CHIP_PU is pulled high\ntrst - at least 50us for CHIP_PU to stay below Vil_nrst to reset chip"
+	(text "-add uart and usb interface"
 		(exclude_from_sim no)
-		(at 230.886 101.6 0)
+		(at 238.506 86.36 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "ba45e473-763f-45bd-bb74-6357e43c93f0")
+	)
+	(text "-at least 50us for power rails to stabilize before CHIP_PU is pulled high\n-at least 50us for CHIP_PU to stay below Vil_nrst to reset chip"
+		(exclude_from_sim no)
+		(at 205.486 137.16 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2841,12 +2851,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b3a9e6c4-d35c-4457-aa99-d6239ea14195")
-	)
-	(junction
-		(at 33.02 93.98)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "bd923062-cc9e-442e-9435-beca7e7541a9")
 	)
 	(junction
 		(at 25.4 74.93)
@@ -3001,16 +3005,6 @@
 			(type default)
 		)
 		(uuid "4b2e19d2-0021-44b4-b39e-9ad16cb20d21")
-	)
-	(wire
-		(pts
-			(xy 33.02 93.98) (xy 43.18 93.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4faba358-b356-4c47-8053-99c5b9188c04")
 	)
 	(wire
 		(pts
@@ -3831,7 +3825,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1u"
+		(property "Value" "0.1u"
 			(at 36.83 99.0599 0)
 			(effects
 				(font
@@ -5126,72 +5120,6 @@
 			(project ""
 				(path "/99584293-ff2b-4397-8b8b-c39f1581dc82"
 					(reference "#PWR023")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 43.18 101.6 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5128b972-16ca-4b8f-a726-35d1daf4a518")
-		(property "Reference" "#PWR017"
-			(at 43.18 107.95 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 43.18 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 43.18 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 43.18 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 43.18 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "59166bff-4f5c-4c7f-9e09-fe91a32e3d0d")
-		)
-		(instances
-			(project "capstone-drone-project"
-				(path "/99584293-ff2b-4397-8b8b-c39f1581dc82"
-					(reference "#PWR017")
 					(unit 1)
 				)
 			)
@@ -6919,76 +6847,6 @@
 			(project ""
 				(path "/99584293-ff2b-4397-8b8b-c39f1581dc82"
 					(reference "#PWR022")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 43.18 97.79 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "b2c4b04d-9263-42a2-b78d-cbdb2f7fb390")
-		(property "Reference" "C12"
-			(at 46.99 96.5199 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10n"
-			(at 46.99 99.0599 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 44.1452 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 43.18 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 43.18 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "26f402a8-90b8-4cb5-8f99-ccc4b3636d8b")
-		)
-		(pin "2"
-			(uuid "25e6823d-0c09-4751-b065-67f93cd431ea")
-		)
-		(instances
-			(project "capstone-drone-project"
-				(path "/99584293-ff2b-4397-8b8b-c39f1581dc82"
-					(reference "C12")
 					(unit 1)
 				)
 			)
