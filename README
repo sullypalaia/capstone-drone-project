@@ -1,1 +1,12 @@
-wip
+done:
+    ->bypass caps
+    ->boot mode
+    ->40MHz crystal
+    ->chip_pu
+    ->psram module
+
+todo:
+    ->rf matching
+    ->uart
+    ->usb
+    ->flash
