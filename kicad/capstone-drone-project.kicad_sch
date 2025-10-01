@@ -3896,6 +3896,16 @@
 		)
 		(uuid "06eb2cce-7881-499d-b99b-716a49133414")
 	)
+	(text "GPIO45 is another strapping pin that sets the voltage output for spi"
+		(exclude_from_sim no)
+		(at 195.58 87.376 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "1e5f890b-068a-4c11-8238-c6825532eab3")
+	)
 	(text "power supply undetermined but will need voltage regulator"
 		(exclude_from_sim no)
 		(at 72.39 22.86 0)
